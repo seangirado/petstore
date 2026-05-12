@@ -1,0 +1,20 @@
+-- Sample Pet Data for PetStore Development and Demo
+-- This data is loaded automatically by Spring Boot during development (ddl-auto=create-drop)
+
+INSERT INTO pets (id, name, type, breed, age_months, price, description, available, image_url, created_at, updated_at)
+VALUES 
+    ('550e8400-e29b-41d4-a716-446655440001', 'Buddy', 'DOG', 'Golden Retriever', 18, 350.00, 'Friendly and energetic family dog who loves to play fetch and swim.', true, 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440002', 'Luna', 'CAT', 'Siamese', 24, 200.00, 'Elegant and vocal Siamese cat with striking blue eyes.', true, 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440003', 'Max', 'DOG', 'German Shepherd', 36, 450.00, 'Loyal and intelligent German Shepherd, perfect for an active family.', true, 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440004', 'Whiskers', 'CAT', 'Persian', 12, 250.00, 'Fluffy white Persian cat with a calm and gentle temperament.', false, 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440005', 'Charlie', 'DOG', 'Labrador Retriever', 24, 380.00, 'Outgoing and even-tempered Labrador, great with kids.', true, 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440006', 'Tweety', 'BIRD', 'Parrot', 36, 150.00, 'Colorful and talkative parrot who loves interacting with people.', true, 'https://images.unsplash.com/photo-1444464666168-49d633b86797?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440007', 'Nemo', 'FISH', 'Clownfish', 6, 50.00, 'Vibrant orange and white clownfish, perfect for beginners.', true, 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440008', 'Daisy', 'DOG', 'Beagle', 18, 280.00, 'Curious and merry Beagle with a great nose for adventure.', true, 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440009', 'Smokey', 'CAT', 'Bengal', 15, 350.00, 'Exotic Bengal cat with wild markings and playful personality.', true, 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440010', 'Rocky', 'DOG', 'Bulldog', 30, 400.00, 'Sturdy and affectionate Bulldog who loves lounging and short walks.', false, 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440011', 'Kiwi', 'BIRD', 'Budgie', 18, 75.00, 'Playful and colorful budgie, excellent for first-time bird owners.', true, 'https://images.unsplash.com/photo-1444464666168-49d633b86797?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440012', 'Blubby', 'FISH', 'Goldfish', 12, 30.00, 'Classic goldfish, easy to care for and beautiful to watch.', true, 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440013', 'Cooper', 'DOG', 'Dachshund', 24, 320.00, 'Small but mighty Dachshund with a big personality.', true, 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440014', 'Mittens', 'CAT', 'Tabby', 8, 180.00, 'Sweet and playful tabby kitten looking for a loving home.', true, 'https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=300&fit=crop', NOW(), NOW()),
+    ('550e8400-e29b-41d4-a716-446655440015', 'Ace', 'DOG', 'Poodle', 12, 300.00, 'Intelligent and hypoallergenic Poodle, great for active families.', true, 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop', NOW(), NOW());
