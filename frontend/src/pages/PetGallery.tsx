@@ -42,7 +42,7 @@ export default function PetGallery() {
         )}
 
         {error && (
-          <div className="rounded-3xl border border-rose-200 bg-rose-50 p-8 text-center text-rose-700 shadow-sm">
+          <div className="rounded-3xl border border-slate-300 bg-slate-100 p-8 text-center text-slate-700 shadow-sm">
             <p className="text-base font-semibold">Unable to load pets.</p>
             <p>{error.error || 'Please try again later.'}</p>
           </div>

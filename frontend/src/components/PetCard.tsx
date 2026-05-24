@@ -14,7 +14,7 @@ function availabilityLabel(available: boolean) {
 }
 
 function availabilityClass(available: boolean) {
-  return available ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+  return available ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200 text-slate-800'
 }
 
 export default function PetCard({ pet, onDelete }: PetCardProps) {
