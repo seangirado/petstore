@@ -16,7 +16,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/girado/**")
                 .allowedOriginPatterns(
                     "http://localhost:*",          // Development frontend on any local port
-                    "https://petstore-frontend.onrender.com"  // Production Render frontend
+                    "https://*.onrender.com"       // All Render subdomains
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
