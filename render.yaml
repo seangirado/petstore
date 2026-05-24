@@ -1,0 +1,63 @@
+# Render Blueprint for PetStore
+# - Backend: Java (Maven) web service in `backend/`
+# - Frontend: Vite static site in `frontend/`
+# - Database: managed PostgreSQL (placeholders for secrets)
+
+services:
+  - name: petstore-backend
+    type: web_service
+    env: java
+    repo: .
+    branch: main
+    rootDir: backend
+    buildCommand: mvn -f backend/pom.xml -DskipTests package
+    startCommand: java -jar backend/target/*.jar
+    plan: starter
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: petstore-db
+          property: jdbcUrl
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: petstore-db
+          property: username
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: petstore-db
+          property: password
+
+  - name: petstore-frontend
+    type: static_site
+    repo: .
+    branch: main
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    publishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: "https://<BACKEND_PUBLIC_URL>/api" # replace with backend URL after deploy
+
+databases:
+  - name: petstore-db
+    type: postgresql
+    plan: starter
+    version: "14"
+    region: oregon
+
+# Optional custom services / jobs examples
+# jobs:
+#   - name: migrate-db
+#     type: job
+#     rootDir: backend
+#     buildCommand: mvn -f backend/pom.xml -DskipTests package
+#     startCommand: java -jar backend/target/*.jar --spring.jpa.hibernate.ddl-auto=update
+
+# Notes:
+# - Replace placeholders like <BACKEND_PUBLIC_URL> before creating services
+# - Add any Render environment variables or secrets in the Render dashboard (API keys, SMTP, etc.)
+# - If you prefer a Docker service for the backend, change `type` to `docker` and add a `dockerfilePath` entry
