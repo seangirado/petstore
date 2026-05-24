@@ -5,7 +5,7 @@ import { useGallery } from '../hooks/useGallery'
 export default function PetGallery() {
   const { pets, loading, error, refetch } = useGallery()
 
-  const handlePetDeleted = (petId: string) => {
+  const handlePetDeleted = () => {
     refetch()
   }
 
